@@ -14,7 +14,8 @@ namespace Day19UserRegistration
             string phoneNum = @"[0-9]{2}\s+[1-9]{10}$";
             //string password = @"[a-zA-Z]{8}$";
             //string password = @"[A-Z]{1}[a-zA-Z]{7}$";
-            string password = @"[a-zA-Z][A-Z][0-9]+[a-zA-Z]$";
+            //string password = @"[a-zA-Z][A-Z][0-9]+[a-zA-Z]$";
+            string password = @"[a-zA-Z0-9]{1}[A-Z][0-9][@#$%&*_-]+[a-zA-Z0-9]$";
 
             Regex regex = new Regex(password);
             Console.WriteLine(regex.IsMatch(inStr));
