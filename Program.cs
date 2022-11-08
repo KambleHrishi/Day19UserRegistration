@@ -1,10 +1,17 @@
-﻿namespace Day19UserRegistration
+﻿using System.Text.RegularExpressions;
+
+namespace Day19UserRegistration
 {
     public class Program
     {
         public static void Main(string[]args)
         {
-            Console.WriteLine("Welcome to User Registration using Regex");
+            string inStr = Console.ReadLine();
+
+            string firstName = @"^[A-Z]{1}[a-zA-Z]{2,9}$";
+
+            Regex regex = new Regex(firstName);
+            Console.WriteLine(regex.IsMatch(inStr));
         }
     }
 }
