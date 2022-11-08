@@ -17,7 +17,7 @@ namespace Day19UserRegistration
             //string password = @"[a-zA-Z][A-Z][0-9]+[a-zA-Z]$";
             string password = @"[a-zA-Z0-9]{1}[A-Z][0-9][@#$%&*_-]+[a-zA-Z0-9]$";
 
-            Regex regex = new Regex(password);
+            Regex regex = new Regex(emailId);
             Console.WriteLine(regex.IsMatch(inStr));
         }
     }
